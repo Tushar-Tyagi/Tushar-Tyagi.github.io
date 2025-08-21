@@ -50,8 +50,8 @@
       min-width: 220px;
     }
     .profile-pic {
-      width: 220px;
-      height: 220px;
+      width: 300px;
+      height: 375px;
       object-fit: cover;
       border-radius: 8px;
       margin-bottom: 10px;
@@ -113,30 +113,41 @@
     <h1>Tushar Tyagi</h1>
     <div class="nav">
   <a href="#bio">Bio</a>
-  <a href="Tushar_resume.pdf" target="_blank">CV</a>
-  <a href="#publications">Publications</a>
-  <a href="https://github.com/Tushar-Tyagi" target="_blank">GitHub</a>
-  <a href="https://linkedin.com/in/tushartyagi01" target="_blank">LinkedIn</a>
+  <a href="#publications">Patent</a>
+    <a href="#education">Education</a>
+    <a href="#experience">Experience</a>
+    <a href="Tushar_resume.pdf" target="_blank">CV</a>
   <a href="photography.html" target="_blank">Photography</a>
 </div>
   </div>
   
   <div class="main-content">
     <div class="left-panel">
-      <img src="yourphoto.jpg" alt="Tushar Tyagi" class="profile-pic">
-      <div class="profile-info">
-        <div>
-          <b>MS in Computer Science</b><br>
-          Georgia Institute of Technology
-        </div>
-        <div>
-          <span class="contact-email">tushartyagi1811@gmail.com</span>
-        </div>
-        <div>
-          <a class="instagram-link" href="https://instagram.com/tushar.photog" target="_blank">@tushar.photog</a>
-        </div>
-      </div>
+  <img src="yourphoto.jpg" alt="Tushar Tyagi" class="profile-pic">
+  <div class="profile-info">
+    <div>
+      <b>MS in Computer Science</b><br>
+      Georgia Institute of Technology
     </div>
+    <div>
+      <span class="contact-email">tushartyagi1811@gmail.com</span>
+    </div>
+  </div>
+  <!-- Social Links with Icons -->
+  <div style="margin-top:10px; display:flex; gap:24px;">
+    <a href="https://github.com/Tushar-Tyagi" target="_blank">
+      <img src="icons/github.jpg" alt="GitHub" style="width:28px;height:28px;vertical-align:top;">
+    </a>
+    <a href="https://linkedin.com/in/tushartyagi01" target="_blank">
+      <img src="icons/linkedin.svg.webp" alt="LinkedIn" style="width:28px;height:28px;vertical-align:bottom;">
+    </a>
+    <a href="https://instagram.com/tushar.photog" target="_blank">
+      <img src="icons/instagram.jpeg" alt="Instagram" style="width:28px;height:28px;vertical-align:middle;">
+    </a>
+    
+  </div>
+</div>
+
     <div class="right-panel">
       <div class="info-block" id="news">
         <h2>News</h2>
@@ -144,6 +155,7 @@
           <li>[Aug 2025] Started MSCS @ Georgia Tech!</li>
           <li>[July 2025] Left role as Machine Learning Engineer 2 at Adobe after 4 years</li>
           <li>[Sept 2024] My patent on page boundary detection published!</li>
+            <li>[Dec 2023] Runner-Up:  Document Cloud India Hackweek</li>
           <li>[June 2023] Winner: Acrobat Desktop Ideathon</li>
         </ul>
       </div>
@@ -154,15 +166,17 @@
           I am a graduate student in Computer Science at Georgia Tech with a focus on ML and Computer Vision.<br>
           Previously, I was a Machine Learning Engineer at Adobe, working on real-time document intelligence and computer vision systems.
           My interests include Computer Vision, AI, LLMs, MLOps, and building efficient AI systems.
+          <br><br>
+          I have intensively pursued the art of photography, and hence a natural interest lies in the field of computer vision.
+          I have been fortunate to have my work recognized in various photography contests and exhibitions.
         </p>
       </div>
       
       <div class="info-block" id="publications">
-        <h2>Selected Publications</h2>
+        <h2>Patent</h2>
         <ul class="publications-list">
           <li>
             <b>US20240404070A1:</b> Precise book page boundary detection using deep ML model and image processing algorithms. <i>Published Sept 2024.</i>
-            [<a href="Tushar_resume.pdf" target="_blank">more</a>]
           </li>
         </ul>
       </div>
@@ -182,6 +196,33 @@
           </li>
         </ul>
       </div>
+
+      <div class="info-block" id="experience">
+  <h2>Experience</h2>
+  <ul class="experience-list">
+    <li>
+      <b>Machine Learning Engineer 2, Adobe</b><br />
+      July 2021 – July 2025<br />
+      Developed real-time document classification models with 90% accuracy, boosting feature MAU by 50%.<br />
+      Optimized ML model pipelines and reduced model sizes, improving performance and user experience.<br />
+      Implemented boundary detection and segmentation models, increasing accuracy by up to 30%.<br />
+      Created LLM-based solutions for AI assistant features and real-time troubleshooting.<br />
+      Technologies: Python, PyTorch, Keras, TensorFlow Lite, Computer Vision, Prompt Engineering.
+    </li>
+    <li>
+      <b>Product Development Intern, Furrble</b><br />
+      Jan 2021 – Feb 2021<br />
+      Developed CRUD API endpoints for the mobile app using GoLang.
+    </li>
+    <li>
+      <b>Product Development Intern, Adobe</b><br />
+      May 2020 – July 2020<br />
+      Developed smart image cleaning tools using image processing and deep learning.<br />
+      Created synthetic data generation scripts using VBA.
+    </li>
+  </ul>
+</div>
+
       
       <div class="info-block" id="achievements">
         <h2>Achievements</h2>

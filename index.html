@@ -43,14 +43,37 @@
     .left-panel {
       flex: 1 1 250px;
       margin-right: 40px;
+      display: flex;
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 25px;
+      min-width: 220px;
     }
     .profile-pic {
       width: 220px;
       height: 220px;
       object-fit: cover;
       border-radius: 8px;
-      margin-bottom: 18px;
+      margin-bottom: 10px;
       box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+    }
+    .profile-info {
+      font-size: 1.08em;
+      line-height: 1.6;
+      display: flex;
+      flex-direction: column;
+      gap: 10px;
+    }
+    .contact-email, .instagram-link {
+      color: #222;
+      text-decoration: underline;
+      word-break: break-all;
+    }
+    .instagram-link {
+      margin-top: 2px;
+      text-decoration: none;
+      color: #c13584;
+      font-weight: 500;
     }
     .right-panel {
       flex: 2 1 350px;
@@ -66,13 +89,9 @@
       padding-bottom: 4px;
       font-weight: 500;
     }
-    .news-list, .achievements-list, .publications-list {
+    .news-list, .achievements-list, .publications-list, .education-list {
       list-style: disc;
       padding-left: 24px;
-    }
-    .contact-email {
-      color: #222;
-      text-decoration: underline;
     }
     @media (max-width: 800px) {
       .main-content {
@@ -84,6 +103,7 @@
       .left-panel {
         margin-bottom: 28px;
         text-align: center;
+        align-items: center;
       }
     }
   </style>
@@ -92,29 +112,37 @@
   <div class="header">
     <h1>Tushar Tyagi</h1>
     <div class="nav">
-      <a href="#bio">Bio</a>
-      <a href="Tushar_resume.pdf" target="_blank">CV</a>
-      <a href="#publications">Publications</a>
-      <a href="https://github.com/Tushar-Tyagi" target="_blank">GitHub</a>
-      <a href="https://linkedin.com/in/tushartyagi01" target="_blank">LinkedIn</a>
-    </div>
+  <a href="#bio">Bio</a>
+  <a href="Tushar_resume.pdf" target="_blank">CV</a>
+  <a href="#publications">Publications</a>
+  <a href="https://github.com/Tushar-Tyagi" target="_blank">GitHub</a>
+  <a href="https://linkedin.com/in/tushartyagi01" target="_blank">LinkedIn</a>
+  <a href="photography.html" target="_blank">Photography</a>
+</div>
   </div>
   
   <div class="main-content">
     <div class="left-panel">
       <img src="yourphoto.jpg" alt="Tushar Tyagi" class="profile-pic">
-      <div style="font-size:1.06em;">
-        <b>MS in Computer Science</b><br>
-        Georgia Institute of Technology<br>
-        <span class="contact-email">tushartyagi1811@gmail.com</span>
+      <div class="profile-info">
+        <div>
+          <b>MS in Computer Science</b><br>
+          Georgia Institute of Technology
+        </div>
+        <div>
+          <span class="contact-email">tushartyagi1811@gmail.com</span>
+        </div>
+        <div>
+          <a class="instagram-link" href="https://instagram.com/tushar.photog" target="_blank">@tushar.photog</a>
+        </div>
       </div>
     </div>
     <div class="right-panel">
       <div class="info-block" id="news">
         <h2>News</h2>
         <ul class="news-list">
-          <li>[Aug 2025] Started MS at Georgia Tech!</li>
-          <li>[July 2025] Completed role as Machine Learning Engineer 2 at Adobe</li>
+          <li>[Aug 2025] Started MSCS @ Georgia Tech!</li>
+          <li>[July 2025] Left role as Machine Learning Engineer 2 at Adobe after 4 years</li>
           <li>[Sept 2024] My patent on page boundary detection published!</li>
           <li>[June 2023] Winner: Acrobat Desktop Ideathon</li>
         </ul>
@@ -123,9 +151,9 @@
       <div class="info-block" id="bio">
         <h2>Bio</h2>
         <p>
-          I am a graduate student in Computer Science at Georgia Tech with a focus on machine learning and AI agents.<br>
+          I am a graduate student in Computer Science at Georgia Tech with a focus on ML and Computer Vision.<br>
           Previously, I was a Machine Learning Engineer at Adobe, working on real-time document intelligence and computer vision systems.
-          My interests include AI, LLMs, MLOps, and building scalable solutions for intelligent document processing and generation.
+          My interests include Computer Vision, AI, LLMs, MLOps, and building efficient AI systems.
         </p>
       </div>
       
@@ -135,6 +163,22 @@
           <li>
             <b>US20240404070A1:</b> Precise book page boundary detection using deep ML model and image processing algorithms. <i>Published Sept 2024.</i>
             [<a href="Tushar_resume.pdf" target="_blank">more</a>]
+          </li>
+        </ul>
+      </div>
+      
+      <div class="info-block" id="education">
+        <h2>Education</h2>
+        <ul class="education-list">
+          <li>
+            <b>Georgia Institute of Technology</b> — MS in Computer Science, Machine Learning Specialization<br />
+            Aug 2024 – Present<br />
+            GPA: 4.0/4.0
+          </li>
+          <li>
+            <b>Indian Institute of Technology Mandi</b> — B.Tech in Computer Science, Minor in Management Studies<br />
+            Aug 2017 – June 2021<br />
+            CGPA: 8.39/10.00
           </li>
         </ul>
       </div>

@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Tushar Tyagi Photography</title>
+  <style>
+    body {
+      font-family: 'Segoe UI', Arial, sans-serif;
+      background: #fafbfc;
+      max-width: 900px;
+      margin: 40px auto;
+      color: #222;
+    }
+    h1 {
+      font-size: 2.2em;
+      margin-top: 0;
+    }
+    .gallery {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
+      margin-bottom: 32px;
+    }
+    .gallery img {
+      width: 260px;
+      height: 170px;
+      object-fit: cover;
+      border-radius: 7px;
+      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      background: #eee;
+      transition: transform 0.2s;
+    }
+    .gallery img:hover {
+      transform: scale(1.04);
+    }
+    .achievements {
+      margin-top: 32px;
+    }
+    .achievements h2 {
+      font-size: 1.3em;
+      margin-bottom: 7px;
+      color: #2c3e50;
+    }
+    .achievements ul {
+      padding-left: 22px;
+    }
+    a.back-link {
+      display: inline-block;
+      margin-bottom: 28px;
+      color: #1a0dab;
+      text-decoration: none;
+      font-size: 1.05em;
+    }
+    a.back-link:hover {
+      text-decoration: underline;
+    }
+    @media (max-width:700px) {
+      .gallery {
+        flex-direction: column;
+        align-items: center;
+      }
+      .gallery img {
+        width: 90vw;
+        height: 38vw;
+        max-width: 340px;
+      }
+    }
+  </style>
+</head>
+<body>
+  <a href="index.html" class="back-link">&larr; Back to Homepage</a>
+  <h1>Photography Portfolio</h1>
+
+  <div class="gallery">
+    <img src="photo1.jpg" alt="Sunset over the hills">
+    <img src="photo2.jpg" alt="Cityscape at dawn">
+    <img src="photo3.jpg" alt="Portrait in soft light">
+    <!-- Add more photos as desired -->
+  </div>
+
+  <div class="achievements">
+    <h2>Photographic Achievements</h2>
+    <ul>
+      <li>Finalist, India National Geographic Photo Contest 2024</li>
+      <li>Featured on @yourcity Instagram for "Best Street Photography"</li>
+      <li>First place, Georgia Tech Student Photo Exhibition 2025</li>
+      <li>Photographs published in Local Travel Magazine, 2023</li>
+      <!-- Add your real achievements here -->
+    </ul>
+  </div>
+</body>
+</html>

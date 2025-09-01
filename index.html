@@ -5,232 +5,488 @@
   <meta name="viewport" content="width=device-width, initial-scale=1" />
   <title>Tushar Tyagi</title>
   <style>
-    body {
-      font-family: 'Segoe UI', Arial, sans-serif;
+    * {
       margin: 0;
-      color: #222;
-      background: #fafbfc;
-      max-width: 950px;
-      margin: 40px auto;
+      padding: 0;
+      box-sizing: border-box;
     }
+
+    body {
+      font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, Oxygen, Ubuntu, Cantarell, sans-serif;
+      color: #2d3748;
+      background: linear-gradient(146deg, #e9eaf4 0%, #b4c8ed 100%);
+      min-height: 100vh;
+      line-height: 1.6;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 20px;
+      background: rgba(255, 255, 255, 0.95);
+      backdrop-filter: blur(10px);
+      border-radius: 20px;
+      box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
+      margin-top: 20px;
+      margin-bottom: 20px;
+    }
+
     .header {
-      padding: 30px 0 10px 0;
-      border-bottom: 1px solid #ddd;
+      text-align: center;
+      padding: 30px 0;
+      border-bottom: 2px solid #e2e8f0;
+      margin-bottom: 40px;
     }
+
     .header h1 {
-      font-size: 2.5em;
-      margin: 0 0 10px 0;
-      font-weight: 400;
+      font-size: clamp(2.5rem, 5vw, 3.5rem);
+      font-weight: 700;
+      background: linear-gradient(135deg, #667eea 0%, #764ba2 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+      margin-bottom: 15px;
     }
+
     .nav {
       display: flex;
-      gap: 22px;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 10px;
-      margin-bottom: 20px;
-      font-size: 1.12em;
+      justify-content: center;
+      flex-wrap: wrap;
+      gap: 20px;
+      margin-top: 20px;
     }
+
     .nav a {
       text-decoration: none;
-      color: #1a0dab;
-      font-weight: 400;
+      color: #4a5568;
+      font-weight: 500;
+      padding: 8px 16px;
+      border-radius: 25px;
+      transition: all 0.3s ease;
+      border: 2px solid transparent;
     }
+
+    .nav a:hover {
+      color: #667eea;
+      border-color: #667eea;
+      background: rgba(102, 126, 234, 0.1);
+      transform: translateY(-2px);
+    }
+
     .main-content {
-      display: flex;
-      flex-wrap: wrap;
-      margin-top: 30px;
+      display: grid;
+      grid-template-columns: 1fr 2fr;
+      gap: 60px;
+      align-items: start;
     }
+
     .left-panel {
-      flex: 1 1 250px;
-      margin-right: 40px;
       display: flex;
       flex-direction: column;
-      align-items: flex-start;
-      gap: 25px;
-      min-width: 220px;
+      align-items: center;
+      text-align: center;
+      position: sticky;
+      top: 20px;
     }
+
     .profile-pic {
-      width: 300px;
-      height: 375px;
+      width: 280px;
+      height: 350px;
       object-fit: cover;
-      border-radius: 8px;
-      margin-bottom: 10px;
-      box-shadow: 0 2px 12px rgba(0,0,0,0.04);
+      border-radius: 20px;
+      margin-bottom: 25px;
+      box-shadow: 0 15px 35px rgba(0, 0, 0, 0.15);
+      transition: transform 0.3s ease;
     }
+
+    .profile-pic:hover {
+      transform: scale(1.05);
+    }
+
     .profile-info {
-      font-size: 1.08em;
-      line-height: 1.6;
-      display: flex;
-      flex-direction: column;
-      gap: 10px;
+      background: white;
+      padding: 25px;
+      border-radius: 15px;
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.08);
+      margin-bottom: 20px;
+      width: 100%;
     }
-    .contact-email, .instagram-link {
-      color: #222;
-      text-decoration: underline;
+
+    .profile-info div {
+      margin-bottom: 15px;
+      font-size: 1.1rem;
+    }
+
+    .profile-info div:last-child {
+      margin-bottom: 0;
+    }
+
+    .contact-email {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
       word-break: break-all;
     }
-    .instagram-link {
-      margin-top: 2px;
+
+    .contact-email:hover {
+      text-decoration: underline;
+    }
+
+    .social-links {
+      display: flex;
+      justify-content: center;
+      gap: 20px;
+      margin-top: 20px;
+    }
+
+    .social-links a {
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      width: 45px;
+      height: 45px;
+      background: white;
+      border-radius: 50%;
+      box-shadow: 0 5px 15px rgba(0, 0, 0, 0.1);
+      transition: all 0.3s ease;
       text-decoration: none;
-      color: #c13584;
-      font-weight: 500;
     }
+
+    .social-links a:hover {
+      transform: translateY(-3px);
+      box-shadow: 0 10px 25px rgba(0, 0, 0, 0.15);
+    }
+
+    .social-links img {
+      width: 24px;
+      height: 24px;
+    }
+
     .right-panel {
-      flex: 2 1 350px;
+      padding-left: 20px;
     }
+
     .info-block {
-      margin-bottom: 28px;
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      margin-bottom: 30px;
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
+    .info-block:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 15px 40px rgba(0, 0, 0, 0.12);
+    }
+
     .info-block h2 {
-      margin-bottom: 8px;
-      color: #2c3e50;
-      font-size: 1.2em;
-      border-bottom: 1px solid #eee;
-      padding-bottom: 4px;
-      font-weight: 500;
+      color: #2d3748;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #667eea;
+      display: inline-block;
     }
-    .news-list, .achievements-list, .publications-list, .education-list {
-      list-style: disc;
-      padding-left: 24px;
+
+    .info-block p {
+      font-size: 1.1rem;
+      line-height: 1.8;
+      color: #4a5568;
     }
-    @media (max-width: 800px) {
+
+    .news-list, .achievements-list, .publications-list, .education-list, .experience-list {
+      list-style: none;
+      padding: 0;
+    }
+
+    .news-list li, .achievements-list li, .publications-list li, .education-list li, .experience-list li {
+      padding: 15px 0;
+      border-bottom: 1px solid #e2e8f0;
+      font-size: 1.05rem;
+      line-height: 1.6;
+      position: relative;
+      padding-left: 25px;
+    }
+
+    .news-list li:before, .achievements-list li:before, .publications-list li:before, .education-list li:before, .experience-list li:before {
+      content: "•";
+      color: #667eea;
+      font-weight: bold;
+      position: absolute;
+      left: 0;
+      font-size: 1.2rem;
+    }
+
+    .news-list li:last-child, .achievements-list li:last-child, .publications-list li:last-child, .education-list li:last-child, .experience-list li:last-child {
+      border-bottom: none;
+    }
+
+    /* Mobile Responsiveness */
+    @media (max-width: 768px) {
+      .container {
+        margin: 10px;
+        padding: 15px;
+        border-radius: 15px;
+      }
+
+      .header {
+        padding: 20px 0;
+        margin-bottom: 30px;
+      }
+
+      .nav {
+        gap: 10px;
+      }
+
+      .nav a {
+        padding: 6px 12px;
+        font-size: 0.9rem;
+      }
+
       .main-content {
-        flex-direction: column;
+        grid-template-columns: 1fr;
+        gap: 30px;
       }
-      .left-panel, .right-panel {
-        margin: 0;
-      }
+
       .left-panel {
-        margin-bottom: 28px;
-        text-align: center;
-        align-items: center;
+        position: static;
+        order: 1;
+      }
+
+      .right-panel {
+        padding-left: 0;
+        order: 2;
+      }
+
+      .profile-pic {
+        width: 220px;
+        height: 280px;
+      }
+
+      .profile-info {
+        padding: 20px;
+      }
+
+      .info-block {
+        padding: 20px;
+        margin-bottom: 20px;
+      }
+
+      .info-block h2 {
+        font-size: 1.3rem;
+      }
+
+      .social-links {
+        gap: 15px;
+      }
+
+      .social-links a {
+        width: 40px;
+        height: 40px;
       }
     }
+
+    @media (max-width: 480px) {
+      .container {
+        margin: 5px;
+        padding: 10px;
+      }
+
+      .header {
+        padding: 15px 0;
+      }
+
+      .nav {
+        flex-direction: column;
+        align-items: center;
+        gap: 8px;
+      }
+
+      .profile-pic {
+        width: 180px;
+        height: 230px;
+      }
+
+      .profile-info {
+        padding: 15px;
+      }
+
+      .profile-info div {
+        font-size: 1rem;
+      }
+
+      .info-block {
+        padding: 15px;
+      }
+
+      .info-block h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+
+      .info-block p {
+        font-size: 1rem;
+      }
+
+      .news-list li, .achievements-list li, .publications-list li, .education-list li, .experience-list li {
+        font-size: 0.95rem;
+        padding: 12px 0 12px 20px;
+      }
+    }
+
+    /* Smooth scrolling */
+    html {
+      scroll-behavior: smooth;
+    }
+
+    /* Loading animation */
+    @keyframes fadeInUp {
+      from {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+    .info-block {
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .info-block:nth-child(2) { animation-delay: 0.1s; }
+    .info-block:nth-child(3) { animation-delay: 0.2s; }
+    .info-block:nth-child(4) { animation-delay: 0.3s; }
+    .info-block:nth-child(5) { animation-delay: 0.4s; }
+    .info-block:nth-child(6) { animation-delay: 0.5s; }
   </style>
 </head>
 <body>
-  <div class="header">
-    <h1>Tushar Tyagi</h1>
-    <div class="nav">
-  <a href="#bio">Bio</a>
-  <a href="#publications">Patent</a>
-    <a href="#education">Education</a>
-    <a href="#experience">Experience</a>
-    <a href="Tushar_resume.pdf" target="_blank">CV</a>
-  <a href="photography.html" target="_blank">Photography</a>
-</div>
-  </div>
-  
-  <div class="main-content">
-    <div class="left-panel">
-  <img src="yourphoto.jpg" alt="Tushar Tyagi" class="profile-pic">
-  <div class="profile-info">
-    <div>
-      <b>MS in Computer Science</b><br>
-      Georgia Institute of Technology
+  <div class="container">
+    <div class="header">
+      <h1>Tushar Tyagi</h1>
+      <div class="nav">
+        <a href="#bio">Bio</a>
+        <a href="#publications">Patent</a>
+        <a href="#education">Education</a>
+        <a href="#experience">Experience</a>
+        <a href="Tushar_resume.pdf" target="_blank">CV</a>
+        <a href="photography.html" target="_blank">Photography</a>
+      </div>
     </div>
-    <div>
-      <span class="contact-email">tushartyagi1811@gmail.com</span>
-    </div>
-  </div>
-  <!-- Social Links with Icons -->
-  <div style="margin-top:10px; display:flex; gap:24px;">
-    <a href="https://github.com/Tushar-Tyagi" target="_blank">
-      <img src="icons/github.jpg" alt="GitHub" style="width:28px;height:28px;vertical-align:top;">
-    </a>
-    <a href="https://linkedin.com/in/tushartyagi01" target="_blank">
-      <img src="icons/linkedin.svg.webp" alt="LinkedIn" style="width:28px;height:28px;vertical-align:bottom;">
-    </a>
-    <a href="https://instagram.com/tushar.photog" target="_blank">
-      <img src="icons/instagram.jpeg" alt="Instagram" style="width:28px;height:28px;vertical-align:middle;">
-    </a>
     
-  </div>
-</div>
-
-    <div class="right-panel">
-      <div class="info-block" id="news">
-        <h2>News</h2>
-        <ul class="news-list">
-          <li>[Aug 2025] Started MSCS @ Georgia Tech!</li>
-          <li>[July 2025] Left role as Machine Learning Engineer 2 at Adobe after 4 years</li>
-          <li>[Sept 2024] My patent on page boundary detection published!</li>
-            <li>[Dec 2023] Runner-Up:  Document Cloud India Hackweek</li>
-          <li>[June 2023] Winner: Acrobat Desktop Ideathon</li>
-        </ul>
-      </div>
-      
-      <div class="info-block" id="bio">
-        <h2>Bio</h2>
-        <p>
-          I am a graduate student in Computer Science at Georgia Tech with a focus on ML and Computer Vision.<br>
-          Previously, I was a Machine Learning Engineer at Adobe, working on real-time document intelligence and computer vision systems.
-          My interests include Computer Vision, AI, LLMs, MLOps, and building efficient AI systems.
-          <br><br>
-          I have intensively pursued the art of photography, and hence a natural interest lies in the field of computer vision.
-          I have been fortunate to have my work recognized in various photography contests and exhibitions.
-        </p>
-      </div>
-      
-      <div class="info-block" id="publications">
-        <h2>Patent</h2>
-        <ul class="publications-list">
-          <li>
-            <b>US20240404070A1:</b> Precise book page boundary detection using deep ML model and image processing algorithms. <i>Published Sept 2024.</i>
-          </li>
-        </ul>
-      </div>
-      
-      <div class="info-block" id="education">
-        <h2>Education</h2>
-        <ul class="education-list">
-          <li>
-            <b>Georgia Institute of Technology</b> — MS in Computer Science, Machine Learning Specialization<br />
-            Aug 2024 – Present<br />
-            GPA: 4.0/4.0
-          </li>
-          <li>
-            <b>Indian Institute of Technology Mandi</b> — B.Tech in Computer Science, Minor in Management Studies<br />
-            Aug 2017 – June 2021<br />
-            CGPA: 8.39/10.00
-          </li>
-        </ul>
+    <div class="main-content">
+      <div class="left-panel">
+        <img src="yourphoto.jpg" alt="Tushar Tyagi" class="profile-pic">
+        <div class="profile-info">
+          <div>
+            <b>MS in Computer Science</b><br>
+            Georgia Institute of Technology
+          </div>
+          <div>
+            <a href="mailto:tushartyagi1811@gmail.com" class="contact-email">tushartyagi1811@gmail.com</a>
+          </div>
+        </div>
+        
+        <div class="social-links">
+          <a href="https://github.com/Tushar-Tyagi" target="_blank" title="GitHub">
+            <img src="icons/github.jpg" alt="GitHub">
+          </a>
+          <a href="https://linkedin.com/in/tushartyagi01" target="_blank" title="LinkedIn">
+            <img src="icons/linkedin.svg.webp" alt="LinkedIn">
+          </a>
+          <a href="https://instagram.com/tushar.photog" target="_blank" title="Instagram">
+            <img src="icons/instagram.jpeg" alt="Instagram">
+          </a>
+        </div>
       </div>
 
-      <div class="info-block" id="experience">
-  <h2>Experience</h2>
-  <ul class="experience-list">
-    <li>
-      <b>Machine Learning Engineer 2, Adobe</b><br />
-      July 2021 – July 2025<br />
-      Developed real-time document classification models with 90% accuracy, boosting feature MAU by 50%.<br />
-      Optimized ML model pipelines and reduced model sizes, improving performance and user experience.<br />
-      Implemented boundary detection and segmentation models, increasing accuracy by up to 30%.<br />
-      Created LLM-based solutions for AI assistant features and real-time troubleshooting.<br />
-      Technologies: Python, PyTorch, Keras, TensorFlow Lite, Computer Vision, Prompt Engineering.
-    </li>
-    <li>
-      <b>Product Development Intern, Furrble</b><br />
-      Jan 2021 – Feb 2021<br />
-      Developed CRUD API endpoints for the mobile app using GoLang.
-    </li>
-    <li>
-      <b>Product Development Intern, Adobe</b><br />
-      May 2020 – July 2020<br />
-      Developed smart image cleaning tools using image processing and deep learning.<br />
-      Created synthetic data generation scripts using VBA.
-    </li>
-  </ul>
-</div>
+      <div class="right-panel">
+        <div class="info-block" id="news">
+          <h2>News</h2>
+          <ul class="news-list">
+            <li>[Aug 2025] Started MSCS @ Georgia Tech!</li>
+            <li>[July 2025] Left role as Machine Learning Engineer 2 at Adobe after 4 years</li>
+            <li>[Sept 2024] My patent on page boundary detection published!</li>
+            <li>[Dec 2023] Runner-Up: Document Cloud India Hackweek</li>
+            <li>[June 2023] Winner: Acrobat Desktop Ideathon</li>
+          </ul>
+        </div>
+        
+        <div class="info-block" id="bio">
+          <h2>Bio</h2>
+          <p>
+            I am a graduate student in Computer Science at Georgia Tech with a focus on ML and Computer Vision.<br>
+            Previously, I was a Machine Learning Engineer at Adobe, working on real-time document intelligence and computer vision systems.
+            My interests include Computer Vision, AI, LLMs, MLOps, and building efficient AI systems.
+            <br><br>
+            I have intensively pursued the art of photography, and hence a natural interest lies in the field of computer vision.
+            I have been fortunate to have my work recognized in various photography contests and exhibitions.
+          </p>
+        </div>
+        
+        <div class="info-block" id="publications">
+          <h2>Patent</h2>
+          <ul class="publications-list">
+            <li>
+              <b>US20240404070A1:</b> Precise book page boundary detection using deep ML model and image processing algorithms. <i>Published Sept 2024.</i>
+            </li>
+          </ul>
+        </div>
+        
+        <div class="info-block" id="education">
+          <h2>Education</h2>
+          <ul class="education-list">
+            <li>
+              <b>Georgia Institute of Technology</b> — MS in Computer Science, Machine Learning Specialization<br />
+              Aug 2024 – Present<br />
+              GPA: 4.0/4.0
+            </li>
+            <li>
+              <b>Indian Institute of Technology Mandi</b> — B.Tech in Computer Science, Minor in Management Studies<br />
+              Aug 2017 – June 2021<br />
+              CGPA: 8.39/10.00
+            </li>
+          </ul>
+        </div>
 
-      
-      <div class="info-block" id="achievements">
-        <h2>Achievements</h2>
-        <ul class="achievements-list">
-          <li>Winner: Acrobat Desktop Ideathon (June 2023)</li>
-          <li>Star of the Month Award, Adobe (Sept 2022)</li>
-          <li>3rd Position, Freshmen Innovation Challenge, IIT Mandi (2018)</li>
-        </ul>
+        <div class="info-block" id="experience">
+          <h2>Experience</h2>
+          <ul class="experience-list">
+            <li>
+              <b>Machine Learning Engineer 2, Adobe</b><br />
+              July 2021 – July 2025<br />
+              Developed real-time document classification models with 90% accuracy, boosting feature MAU by 50%.<br />
+              Optimized ML model pipelines and reduced model sizes, improving performance and user experience.<br />
+              Implemented boundary detection and segmentation models, increasing accuracy by up to 30%.<br />
+              Created LLM-based solutions for AI assistant features and real-time troubleshooting.<br />
+              Technologies: Python, PyTorch, Keras, TensorFlow Lite, Computer Vision, Prompt Engineering.
+            </li>
+            <li>
+              <b>Product Development Intern, Furrble</b><br />
+              Jan 2021 – Feb 2021<br />
+              Developed CRUD API endpoints for the mobile app using GoLang.
+            </li>
+            <li>
+              <b>Product Development Intern, Adobe</b><br />
+              May 2020 – July 2020<br />
+              Developed smart image cleaning tools using image processing and deep learning.<br />
+              Created synthetic data generation scripts using VBA.
+            </li>
+          </ul>
+        </div>
+        
+        <div class="info-block" id="achievements">
+          <h2>Achievements</h2>
+          <ul class="achievements-list">
+            <li>Winner: Acrobat Desktop Ideathon (June 2023)</li>
+            <li>Star of the Month Award, Adobe (Sept 2022)</li>
+            <li>3rd Position, Freshmen Innovation Challenge, IIT Mandi (2018)</li>
+          </ul>
+        </div>
       </div>
     </div>
   </div>

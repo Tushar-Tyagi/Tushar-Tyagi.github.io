@@ -17,23 +17,95 @@
       margin-top: 0;
     }
     .gallery {
-      display: flex;
-      flex-wrap: wrap;
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
       gap: 20px;
-      margin-top: 20px;
-      margin-bottom: 32px;
+      margin-top: 30px;
+      margin-bottom: 40px;
     }
     .gallery img {
-      width: 260px;
-      height: 170px;
+      width: 100%;
+      height: auto;
       object-fit: cover;
-      border-radius: 7px;
-      box-shadow: 0 2px 8px rgba(0,0,0,0.07);
+      border-radius: 12px;
+      box-shadow: 0 4px 20px rgba(0,0,0,0.1);
       background: #eee;
-      transition: transform 0.2s;
+      transition: all 0.3s ease;
+      cursor: pointer;
+      aspect-ratio: 4/3;
     }
     .gallery img:hover {
-      transform: scale(1.04);
+      transform: translateY(-8px);
+      box-shadow: 0 8px 30px rgba(0,0,0,0.15);
+    }
+    
+    /* Modal/Lightbox styles */
+    .modal {
+      display: none;
+      position: fixed;
+      z-index: 1000;
+      left: 0;
+      top: 0;
+      width: 100%;
+      height: 100%;
+      background-color: rgba(0, 0, 0, 0.8);
+      backdrop-filter: blur(8px);
+      -webkit-backdrop-filter: blur(8px);
+    }
+    
+    .modal-content {
+      position: absolute;
+      top: 50%;
+      left: 50%;
+      transform: translate(-50%, -50%);
+      width: 90vw;
+      height: 90vh;
+      max-width: 1200px;
+      max-height: 800px;
+      border-radius: 8px;
+      box-shadow: 0 10px 40px rgba(0,0,0,0.3);
+      display: flex;
+      align-items: center;
+      justify-content: center;
+    }
+    
+    .modal-content img {
+      max-width: 100%;
+      max-height: 100%;
+      width: auto;
+      height: auto;
+      object-fit: contain;
+      border-radius: 8px;
+      display: block;
+    }
+    
+    .close {
+      position: absolute;
+      top: 15px;
+      right: 35px;
+      color: #f1f1f1;
+      font-size: 40px;
+      font-weight: bold;
+      cursor: pointer;
+      z-index: 1001;
+      transition: color 0.3s ease;
+    }
+    
+    .close:hover,
+    .close:focus {
+      color: #bbb;
+      text-decoration: none;
+    }
+    
+    /* Animation for modal */
+    .modal.show {
+      display: block;
+      animation: fadeIn 0.3s ease;
+    }
+    
+    @keyframes fadeIn {
+      from { opacity: 0; }
+      to { opacity: 1; }
     }
     .achievements {
       margin-top: 32px;
@@ -58,13 +130,14 @@
     }
     @media (max-width:700px) {
       .gallery {
-        flex-direction: column;
-        align-items: center;
+        grid-template-columns: 1fr;
+        gap: 16px;
+        padding: 0 16px;
       }
       .gallery img {
-        width: 90vw;
-        height: 38vw;
-        max-width: 340px;
+        height: auto;
+        border-radius: 8px;
+        aspect-ratio: 4/3;
       }
     }
   </style>
@@ -74,21 +147,67 @@
   <h1>Photography Portfolio</h1>
 
   <div class="gallery">
-    <img src="photo1.jpg" alt="Sunset over the hills">
-    <img src="photo2.jpg" alt="Cityscape at dawn">
-    <img src="photo3.jpg" alt="Portrait in soft light">
-    <!-- Add more photos as desired -->
+    <img src="_DSC9175-Enhanced-NR.jpg" alt="Enhanced landscape photography" onclick="openModal(this)">
+    <img src="12.jpg" alt="Photography composition" onclick="openModal(this)">
+    <img src="19.jpg" alt="Artistic photography" onclick="openModal(this)">
+    <img src="IMG_3142 copy.jpg" alt="Portrait photography" onclick="openModal(this)">
+    <img src="langza2_2 copy (1).jpg" alt="Creative photography" onclick="openModal(this)">
+  </div>
+
+  <!-- Modal/Lightbox -->
+  <div id="imageModal" class="modal">
+    <span class="close" onclick="closeModal()">&times;</span>
+    <div class="modal-content">
+      <img id="modalImage" src="" alt="">
+    </div>
   </div>
 
   <div class="achievements">
     <h2>Photographic Achievements</h2>
     <ul>
-      <li>Finalist, India National Geographic Photo Contest 2024</li>
-      <li>Featured on @yourcity Instagram for "Best Street Photography"</li>
-      <li>First place, Georgia Tech Student Photo Exhibition 2025</li>
-      <li>Photographs published in Local Travel Magazine, 2023</li>
+      <li>Bronze Medal, PX3 Award 2024, Prix De La Photographie Paris (Portraiture/Culture - Non-Professional)</li>
+      <li>Runner-Up: 48-Hour Filmmaking Competition, Inter IIT Cultural Fest, IIT Bombay, 2019</li>
+      <li>Gold Medal, Nostral Ghosbusters, IIT Goa, 2020</li>
       <!-- Add your real achievements here -->
     </ul>
   </div>
+
+  <script>
+    // Get the modal
+    const modal = document.getElementById("imageModal");
+    const modalImg = document.getElementById("modalImage");
+    const closeBtn = document.getElementsByClassName("close")[0];
+
+    // Function to open modal
+    function openModal(img) {
+      modal.classList.add("show");
+      modalImg.src = img.src;
+      modalImg.alt = img.alt;
+      document.body.style.overflow = 'hidden'; // Prevent background scrolling
+    }
+
+    // Function to close modal
+    function closeModal() {
+      modal.classList.remove("show");
+      document.body.style.overflow = 'auto'; // Restore scrolling
+    }
+
+    // Close modal when clicking the close button
+    closeBtn.onclick = closeModal;
+
+    // Close modal when clicking outside the image
+    modal.onclick = function(event) {
+      if (event.target === modal) {
+        closeModal();
+      }
+    }
+
+    // Close modal with Escape key
+    document.addEventListener('keydown', function(event) {
+      if (event.key === 'Escape' && modal.classList.contains('show')) {
+        closeModal();
+      }
+    });
+  </script>
 </body>
 </html>

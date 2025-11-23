@@ -21,14 +21,12 @@
 
     .container {
       max-width: 1200px;
-      margin: 0 auto;
-      padding: 20px;
+      margin: 20px auto;
+      padding: 40px;
       background: rgba(255, 255, 255, 0.95);
       backdrop-filter: blur(10px);
       border-radius: 20px;
       box-shadow: 0 20px 60px rgba(0, 0, 0, 0.1);
-      margin-top: 20px;
-      margin-bottom: 20px;
     }
 
     .header {
@@ -237,9 +235,14 @@
 
     /* Mobile Responsiveness */
     @media (max-width: 768px) {
+      body {
+        background: linear-gradient(146deg, #e9eaf4 0%, #b4c8ed 100%);
+        padding: 10px;
+      }
+
       .container {
-        margin: 10px;
-        padding: 15px;
+        margin: 0 auto;
+        padding: 20px;
         border-radius: 15px;
       }
 
@@ -248,12 +251,18 @@
         margin-bottom: 30px;
       }
 
+      .header h1 {
+        font-size: 2rem;
+      }
+
       .nav {
         gap: 10px;
+        flex-direction: row;
+        justify-content: center;
       }
 
       .nav a {
-        padding: 6px 12px;
+        padding: 8px 14px;
         font-size: 0.9rem;
       }
 
@@ -273,21 +282,33 @@
       }
 
       .profile-pic {
-        width: 220px;
-        height: 280px;
+        width: 240px;
+        height: 300px;
       }
 
       .profile-info {
         padding: 20px;
       }
 
+      .profile-info div {
+        font-size: 1rem;
+      }
+
       .info-block {
-        padding: 20px;
+        padding: 25px;
         margin-bottom: 20px;
       }
 
       .info-block h2 {
         font-size: 1.3rem;
+      }
+
+      .info-block p {
+        font-size: 1rem;
+      }
+
+      .news-list li, .achievements-list li, .publications-list li, .education-list li, .experience-list li {
+        font-size: 1rem;
       }
 
       .social-links {
@@ -298,39 +319,76 @@
         width: 40px;
         height: 40px;
       }
+
+      .social-links img {
+        width: 22px;
+        height: 22px;
+      }
     }
 
     @media (max-width: 480px) {
+      body {
+        padding: 5px;
+      }
+
       .container {
-        margin: 5px;
-        padding: 10px;
+        margin: 0 auto;
+        padding: 15px;
+        border-radius: 12px;
       }
 
       .header {
         padding: 15px 0;
+        margin-bottom: 25px;
+      }
+
+      .header h1 {
+        font-size: 1.8rem;
       }
 
       .nav {
         flex-direction: column;
-        align-items: center;
-        gap: 8px;
+        align-items: stretch;
+        gap: 10px;
+      }
+
+      .nav a {
+        padding: 10px 16px;
+        font-size: 0.95rem;
+        text-align: center;
       }
 
       .profile-pic {
-        width: 180px;
-        height: 230px;
+        width: 200px;
+        height: 250px;
       }
 
       .profile-info {
-        padding: 15px;
+        padding: 18px;
       }
 
       .profile-info div {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        margin-bottom: 12px;
+      }
+
+      .social-links {
+        gap: 12px;
+      }
+
+      .social-links a {
+        width: 38px;
+        height: 38px;
+      }
+
+      .social-links img {
+        width: 20px;
+        height: 20px;
       }
 
       .info-block {
-        padding: 15px;
+        padding: 18px;
+        margin-bottom: 18px;
       }
 
       .info-block h2 {
@@ -339,12 +397,18 @@
       }
 
       .info-block p {
-        font-size: 1rem;
+        font-size: 0.95rem;
+        line-height: 1.6;
       }
 
       .news-list li, .achievements-list li, .publications-list li, .education-list li, .experience-list li {
-        font-size: 0.95rem;
-        padding: 12px 0 12px 20px;
+        font-size: 0.9rem;
+        padding: 12px 0 12px 22px;
+        line-height: 1.5;
+      }
+
+      .news-list li:before, .achievements-list li:before, .publications-list li:before, .education-list li:before, .experience-list li:before {
+        font-size: 1.1rem;
       }
     }
 
@@ -374,6 +438,56 @@
     .info-block:nth-child(4) { animation-delay: 0.3s; }
     .info-block:nth-child(5) { animation-delay: 0.4s; }
     .info-block:nth-child(6) { animation-delay: 0.5s; }
+
+    /* Visitor Map Styles */
+    .visitor-map {
+      background: white;
+      padding: 30px;
+      border-radius: 15px;
+      box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
+      margin-top: 30px;
+      text-align: center;
+      animation: fadeInUp 0.6s ease-out;
+    }
+
+    .visitor-map h2 {
+      color: #2d3748;
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-bottom: 20px;
+      padding-bottom: 10px;
+      border-bottom: 3px solid #667eea;
+      display: inline-block;
+    }
+
+    .map-container {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      margin-top: 20px;
+    }
+
+    @media (max-width: 768px) {
+      .visitor-map {
+        padding: 20px;
+        margin-top: 20px;
+      }
+
+      .visitor-map h2 {
+        font-size: 1.3rem;
+      }
+    }
+
+    @media (max-width: 480px) {
+      .visitor-map {
+        padding: 15px;
+      }
+
+      .visitor-map h2 {
+        font-size: 1.2rem;
+        margin-bottom: 15px;
+      }
+    }
   </style>
 </head>
 <body>
@@ -503,6 +617,14 @@
             <li>3rd Position, Freshmen Innovation Challenge, IIT Mandi (2018)</li>
           </ul>
         </div>
+      </div>
+    </div>
+
+    <!-- Visitor Map -->
+    <div class="visitor-map">
+      <h2>Visitor Map</h2>
+      <div class="map-container">
+        <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=0sJ4JQU_LnOaveT46lemZyx6AnkFye8spTBhS4OANK0&cl=ffffff&w=a"></script>
       </div>
     </div>
   </div>

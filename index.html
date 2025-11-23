@@ -442,7 +442,7 @@
     /* Visitor Map Styles */
     .visitor-map {
       background: white;
-      padding: 30px;
+      padding: 20px;
       border-radius: 15px;
       box-shadow: 0 8px 25px rgba(0, 0, 0, 0.08);
       margin-top: 30px;
@@ -452,10 +452,10 @@
 
     .visitor-map h2 {
       color: #2d3748;
-      font-size: 1.5rem;
+      font-size: 1.2rem;
       font-weight: 600;
-      margin-bottom: 20px;
-      padding-bottom: 10px;
+      margin-bottom: 15px;
+      padding-bottom: 8px;
       border-bottom: 3px solid #667eea;
       display: inline-block;
     }
@@ -464,28 +464,42 @@
       display: flex;
       justify-content: center;
       align-items: center;
-      margin-top: 20px;
+      margin-top: 15px;
+      max-width: 300px;
+      margin-left: auto;
+      margin-right: auto;
+      transform: scale(0.8);
     }
 
     @media (max-width: 768px) {
       .visitor-map {
-        padding: 20px;
+        padding: 15px;
         margin-top: 20px;
       }
 
       .visitor-map h2 {
-        font-size: 1.3rem;
+        font-size: 1.1rem;
+      }
+
+      .map-container {
+        max-width: 250px;
+        transform: scale(0.7);
       }
     }
 
     @media (max-width: 480px) {
       .visitor-map {
-        padding: 15px;
+        padding: 12px;
       }
 
       .visitor-map h2 {
-        font-size: 1.2rem;
-        margin-bottom: 15px;
+        font-size: 1rem;
+        margin-bottom: 10px;
+      }
+
+      .map-container {
+        max-width: 200px;
+        transform: scale(0.6);
       }
     }
   </style>

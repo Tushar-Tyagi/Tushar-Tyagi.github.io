@@ -553,6 +553,42 @@
       display: inline-block;
     }
 
+    .github-stats-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .github-stats-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .github-stats-container img:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+      color: #718096;
+      border-top: 2px solid #e2e8f0;
+    }
+    .footer a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .footer a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+
     .map-container {
       display: flex;
       justify-content: center;
@@ -574,7 +610,43 @@
         font-size: 1.1rem;
       }
 
-      .map-container {
+      .github-stats-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .github-stats-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .github-stats-container img:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+      color: #718096;
+      border-top: 2px solid #e2e8f0;
+    }
+    .footer a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .footer a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+
+    .map-container {
         max-width: 250px;
         transform: scale(0.7);
       }
@@ -590,7 +662,43 @@
         margin-bottom: 10px;
       }
 
-      .map-container {
+      .github-stats-container {
+      display: flex;
+      flex-wrap: wrap;
+      gap: 15px;
+      margin-top: 15px;
+    }
+    .github-stats-container img {
+      max-width: 100%;
+      height: auto;
+      border-radius: 8px;
+      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+    .github-stats-container img:hover {
+      transform: translateY(-2px);
+      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+    }
+    
+    .footer {
+      text-align: center;
+      padding: 30px;
+      margin-top: 40px;
+      color: #718096;
+      border-top: 2px solid #e2e8f0;
+    }
+    .footer a {
+      color: #667eea;
+      text-decoration: none;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .footer a:hover {
+      color: #764ba2;
+      text-decoration: underline;
+    }
+
+    .map-container {
         max-width: 200px;
         transform: scale(0.6);
       }
@@ -604,11 +712,13 @@
       <div class="nav">
         <a href="#bio">Bio</a>
         <a href="#projects">Projects</a>
+        <a href="#open-source">Open Source</a>
+        <a href="#blogs">Blogs</a>
         <a href="#publications">Patent</a>
         <a href="#education">Education</a>
         <a href="#experience">Experience</a>
+        <a href="#media-presentations">Talks</a>
         <a href="tushar_tyagi_Jan26_res.pdf" target="_blank">Résumé</a>
-        <a href="photography.html" target="_blank">Photography</a>
       </div>
     </div>
     
@@ -628,6 +738,9 @@
         <div class="social-links">
           <a href="https://scholar.google.com/citations?user=pY7nQvwAAAAJ" target="_blank" title="Google Scholar">
             <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar">
+          </a>
+          <a href="https://medium.com/@tushartyagi01" target="_blank" title="Medium Blogs">
+            <img src="https://miro.medium.com/v2/resize:fit:128/1*sHkqisEl5tdOykae0BBpNQ.png" alt="Medium">
           </a>
           <a href="https://github.com/Tushar-Tyagi" target="_blank" title="GitHub">
             <img src="icons/github.jpg" alt="GitHub">
@@ -660,9 +773,6 @@
             I am a graduate student in Computer Science at Georgia Tech with a focus on ML and Computer Vision.<br>
             Previously, I was a Machine Learning Engineer at Adobe, working on real-time document intelligence and computer vision systems.
             My interests include Computer Vision, AI, LLMs, MLOps, and building efficient AI systems.
-            <br><br>
-            I have intensively pursued the art of photography, and hence a natural interest lies in the field of computer vision.
-            I have been fortunate to have my work recognized in various photography contests and exhibitions.
           </p>
         </div>
         
@@ -717,6 +827,35 @@
                   </div>
                 </div>
                 <img src="images/propel_arch.png" alt="PROPEL Architecture" class="project-image">
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <div class="info-block" id="open-source">
+          <h2>Open Source</h2>
+          <p>Highlighting some of my key GitHub repositories:</p>
+          <div class="github-stats-container">
+            <a href="https://github.com/Tushar-Tyagi/HER-DDPG" target="_blank">
+              <img src="https://github-readme-stats.vercel.app/api/pin/?username=Tushar-Tyagi&repo=HER-DDPG&theme=graywhite&hide_border=true&title_color=667eea" alt="HER-DDPG Repo" />
+            </a>
+            <a href="https://github.com/Tushar-Tyagi/ML_from_scratch" target="_blank">
+              <img src="https://github-readme-stats.vercel.app/api/pin/?username=Tushar-Tyagi&repo=ML_from_scratch&theme=graywhite&hide_border=true&title_color=667eea" alt="ML_from_scratch Repo" />
+            </a>
+          </div>
+        </div>
+
+        <div class="info-block" id="blogs">
+          <h2>Technical Blogs</h2>
+          <ul class="projects-list">
+            <li>
+              <div class="project-header">
+                <div class="project-content">
+                  <div class="project-title"><a href="https://medium.com/@tushartyagi01" target="_blank" style="text-decoration: none; color: #2d3748;">Medium Articles</a></div>
+                  <div class="project-description">
+                    I write about Machine Learning, Computer Vision, and Software Engineering. Read my articles on <a href="https://medium.com/@tushartyagi01" target="_blank" style="color: #667eea; text-decoration: none; font-weight: 500;">Medium</a>.
+                  </div>
+                </div>
               </div>
             </li>
           </ul>
@@ -776,11 +915,22 @@
           </ul>
         </div>
         
-        <div class="info-block" id="achievements">
+        
+        <div class="info-block" id="media-presentations">
+          <h2>Media & Presentations</h2>
+          <ul class="experience-list">
+            <li>
+              <b>Adobe Document Cloud Summit Presentation</b><br />
+              <i>December 2022</i><br />
+              Delivered a technical talk on "Book Mode" in front of Adobe leadership and staff engineers. Selected as one of 8 out of 200 applications, showcasing the impact and innovation of my document intelligence models.
+            </li>
+          </ul>
+        </div>
+
+<div class="info-block" id="achievements">
           <h2>Achievements</h2>
           <ul class="achievements-list">
             <li>Winner: Acrobat Desktop Ideathon (June 2023)</li>
-            <li>Adobe: Talk on “Book Mode” selected for Document Cloud summit. Presented in front of leadership and staff engineers.  [8/200 applications were selected] (December 2022)</li>
             <li>Star of the Month Award, Adobe (September 2022)</li>
             <li>3rd Position, Freshmen Innovation Challenge, IIT Mandi (2018)</li>
           </ul>
@@ -795,6 +945,10 @@
         <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=0sJ4JQU_LnOaveT46lemZyx6AnkFye8spTBhS4OANK0&cl=ffffff&w=a"></script>
       </div>
     </div>
+    <!-- Footer -->
+    <footer class="footer">
+      <p>&copy; 2026 Tushar Tyagi | <a href="photography.html" target="_blank">Photography Portfolio</a></p>
+    </footer>
   </div>
 </body>
 </html>

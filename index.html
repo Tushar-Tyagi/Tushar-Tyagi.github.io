@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1" />
@@ -206,12 +207,20 @@
       color: #4a5568;
     }
 
-    .news-list, .achievements-list, .publications-list, .education-list, .experience-list {
+    .news-list,
+    .achievements-list,
+    .publications-list,
+    .education-list,
+    .experience-list {
       list-style: none;
       padding: 0;
     }
 
-    .news-list li, .achievements-list li, .publications-list li, .education-list li, .experience-list li {
+    .news-list li,
+    .achievements-list li,
+    .publications-list li,
+    .education-list li,
+    .experience-list li {
       padding: 15px 0;
       border-bottom: 1px solid #e2e8f0;
       font-size: 1.05rem;
@@ -220,7 +229,11 @@
       padding-left: 25px;
     }
 
-    .news-list li:before, .achievements-list li:before, .publications-list li:before, .education-list li:before, .experience-list li:before {
+    .news-list li:before,
+    .achievements-list li:before,
+    .publications-list li:before,
+    .education-list li:before,
+    .experience-list li:before {
       content: "•";
       color: #667eea;
       font-weight: bold;
@@ -229,7 +242,11 @@
       font-size: 1.2rem;
     }
 
-    .news-list li:last-child, .achievements-list li:last-child, .publications-list li:last-child, .education-list li:last-child, .experience-list li:last-child {
+    .news-list li:last-child,
+    .achievements-list li:last-child,
+    .publications-list li:last-child,
+    .education-list li:last-child,
+    .experience-list li:last-child {
       border-bottom: none;
     }
 
@@ -374,7 +391,11 @@
         font-size: 1rem;
       }
 
-      .news-list li, .achievements-list li, .publications-list li, .education-list li, .experience-list li {
+      .news-list li,
+      .achievements-list li,
+      .publications-list li,
+      .education-list li,
+      .experience-list li {
         font-size: 1rem;
       }
 
@@ -482,13 +503,21 @@
         line-height: 1.6;
       }
 
-      .news-list li, .achievements-list li, .publications-list li, .education-list li, .experience-list li {
+      .news-list li,
+      .achievements-list li,
+      .publications-list li,
+      .education-list li,
+      .experience-list li {
         font-size: 0.9rem;
         padding: 12px 0 12px 22px;
         line-height: 1.5;
       }
 
-      .news-list li:before, .achievements-list li:before, .publications-list li:before, .education-list li:before, .experience-list li:before {
+      .news-list li:before,
+      .achievements-list li:before,
+      .publications-list li:before,
+      .education-list li:before,
+      .experience-list li:before {
         font-size: 1.1rem;
       }
 
@@ -516,6 +545,7 @@
         opacity: 0;
         transform: translateY(30px);
       }
+
       to {
         opacity: 1;
         transform: translateY(0);
@@ -526,11 +556,25 @@
       animation: fadeInUp 0.6s ease-out;
     }
 
-    .info-block:nth-child(2) { animation-delay: 0.1s; }
-    .info-block:nth-child(3) { animation-delay: 0.2s; }
-    .info-block:nth-child(4) { animation-delay: 0.3s; }
-    .info-block:nth-child(5) { animation-delay: 0.4s; }
-    .info-block:nth-child(6) { animation-delay: 0.5s; }
+    .info-block:nth-child(2) {
+      animation-delay: 0.1s;
+    }
+
+    .info-block:nth-child(3) {
+      animation-delay: 0.2s;
+    }
+
+    .info-block:nth-child(4) {
+      animation-delay: 0.3s;
+    }
+
+    .info-block:nth-child(5) {
+      animation-delay: 0.4s;
+    }
+
+    .info-block:nth-child(6) {
+      animation-delay: 0.5s;
+    }
 
     /* Visitor Map Styles */
     .visitor-map {
@@ -559,6 +603,7 @@
       gap: 15px;
       margin-top: 15px;
     }
+
     .github-stats-container img {
       max-width: 100%;
       height: auto;
@@ -566,11 +611,12 @@
       box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
       transition: transform 0.3s ease, box-shadow 0.3s ease;
     }
+
     .github-stats-container img:hover {
       transform: translateY(-2px);
       box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
     }
-    
+
     .footer {
       text-align: center;
       padding: 30px;
@@ -578,12 +624,14 @@
       color: #718096;
       border-top: 2px solid #e2e8f0;
     }
+
     .footer a {
       color: #667eea;
       text-decoration: none;
       font-weight: 500;
       transition: all 0.3s ease;
     }
+
     .footer a:hover {
       color: #764ba2;
       text-decoration: underline;
@@ -611,42 +659,46 @@
       }
 
       .github-stats-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .github-stats-container img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .github-stats-container img:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
-    }
-    
-    .footer {
-      text-align: center;
-      padding: 30px;
-      margin-top: 40px;
-      color: #718096;
-      border-top: 2px solid #e2e8f0;
-    }
-    .footer a {
-      color: #667eea;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    .footer a:hover {
-      color: #764ba2;
-      text-decoration: underline;
-    }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+      }
 
-    .map-container {
+      .github-stats-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .github-stats-container img:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+      }
+
+      .footer {
+        text-align: center;
+        padding: 30px;
+        margin-top: 40px;
+        color: #718096;
+        border-top: 2px solid #e2e8f0;
+      }
+
+      .footer a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #764ba2;
+        text-decoration: underline;
+      }
+
+      .map-container {
         max-width: 250px;
         transform: scale(0.7);
       }
@@ -663,48 +715,53 @@
       }
 
       .github-stats-container {
-      display: flex;
-      flex-wrap: wrap;
-      gap: 15px;
-      margin-top: 15px;
-    }
-    .github-stats-container img {
-      max-width: 100%;
-      height: auto;
-      border-radius: 8px;
-      box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-      transition: transform 0.3s ease, box-shadow 0.3s ease;
-    }
-    .github-stats-container img:hover {
-      transform: translateY(-2px);
-      box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
-    }
-    
-    .footer {
-      text-align: center;
-      padding: 30px;
-      margin-top: 40px;
-      color: #718096;
-      border-top: 2px solid #e2e8f0;
-    }
-    .footer a {
-      color: #667eea;
-      text-decoration: none;
-      font-weight: 500;
-      transition: all 0.3s ease;
-    }
-    .footer a:hover {
-      color: #764ba2;
-      text-decoration: underline;
-    }
+        display: flex;
+        flex-wrap: wrap;
+        gap: 15px;
+        margin-top: 15px;
+      }
 
-    .map-container {
+      .github-stats-container img {
+        max-width: 100%;
+        height: auto;
+        border-radius: 8px;
+        box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
+        transition: transform 0.3s ease, box-shadow 0.3s ease;
+      }
+
+      .github-stats-container img:hover {
+        transform: translateY(-2px);
+        box-shadow: 0 8px 15px rgba(0, 0, 0, 0.12);
+      }
+
+      .footer {
+        text-align: center;
+        padding: 30px;
+        margin-top: 40px;
+        color: #718096;
+        border-top: 2px solid #e2e8f0;
+      }
+
+      .footer a {
+        color: #667eea;
+        text-decoration: none;
+        font-weight: 500;
+        transition: all 0.3s ease;
+      }
+
+      .footer a:hover {
+        color: #764ba2;
+        text-decoration: underline;
+      }
+
+      .map-container {
         max-width: 200px;
         transform: scale(0.6);
       }
     }
   </style>
 </head>
+
 <body>
   <div class="container">
     <div class="header">
@@ -721,7 +778,7 @@
         <a href="tushar_tyagi_Jan26_res.pdf" target="_blank">Résumé</a>
       </div>
     </div>
-    
+
     <div class="main-content">
       <div class="left-panel">
         <img src="yourphoto.jpg" alt="Tushar Tyagi" class="profile-pic">
@@ -734,7 +791,7 @@
             <a href="mailto:tushartyagi1811@gmail.com" class="contact-email">tushartyagi1811@gmail.com</a>
           </div>
         </div>
-        
+
         <div class="social-links">
           <a href="https://scholar.google.com/citations?user=pY7nQvwAAAAJ" target="_blank" title="Google Scholar">
             <img src="https://scholar.google.com/favicon.ico" alt="Google Scholar">
@@ -758,7 +815,9 @@
         <div class="info-block" id="news">
           <h2>News</h2>
           <ul class="news-list">
-            <li>[January 2026] Joined <a href="https://sites.gatech.edu/llamas-lab/" target="_blank" rel="noopener noreferrer">Llamas Lab</a> at Georgia Tech to work on Compute Efficient Natural Language Video Retreival</li>
+            <li>[January 2026] Joined <a href="https://sites.gatech.edu/llamas-lab/" target="_blank"
+                rel="noopener noreferrer">Llamas Lab</a> at Georgia Tech to work on Compute Efficient Natural Language
+              Video Retreival</li>
             <li>[Aug 2025] Started MSCS @ Georgia Tech!</li>
             <li>[July 2025] Left role as Machine Learning Engineer 2 at Adobe after 4 years</li>
             <li>[Sept 2024] My patent on page boundary detection published!</li>
@@ -766,16 +825,17 @@
             <li>[June 2023] Winner: Acrobat Desktop Ideathon</li>
           </ul>
         </div>
-        
+
         <div class="info-block" id="bio">
           <h2>Bio</h2>
           <p>
             I am a graduate student in Computer Science at Georgia Tech with a focus on ML and Computer Vision.<br>
-            Previously, I was a Machine Learning Engineer at Adobe, working on real-time document intelligence and computer vision systems.
+            Previously, I was a Machine Learning Engineer at Adobe, working on real-time document intelligence and
+            computer vision systems.
             My interests include Computer Vision, AI, LLMs, MLOps, and building efficient AI systems.
           </p>
         </div>
-        
+
         <div class="info-block" id="projects">
           <h2>Projects</h2>
           <ul class="projects-list">
@@ -786,7 +846,9 @@
                   <div class="project-course">Llamas Lab</div>
                   <div class="project-date">Jan 2026 – Present</div>
                   <div class="project-description">
-                    Building compute-optimal multimodal retrieval system resolving the ingest-vs-query cost bottleneck; applied adaptive candidate pruning and uncertainty-aware tool selection to maximise information gain per GPU dollar. [LangGraph, Python, Agentic AI Systems, Multimodal RAG, Pydantic]
+                    Building compute-optimal multimodal retrieval system resolving the ingest-vs-query cost bottleneck;
+                    applied adaptive candidate pruning and uncertainty-aware tool selection to maximise information gain
+                    per GPU dollar. [LangGraph, Python, Agentic AI Systems, Multimodal RAG, Pydantic]
                   </div>
                 </div>
               </div>
@@ -798,10 +860,13 @@
                   <div class="project-course">GaTech CS 8803 LRV (Dr. Francisco Romero)</div>
                   <div class="project-date">Aug 2025 – December 2025</div>
                   <div class="project-description">
-                    Built fine-grained optimization system using task-type classifiers to dynamically select among five context retrieval complexities (baseline RAG to agentic search), achieving up to 10% accuracy improvement and 2x speedup over static methods on Video-MME.
+                    Built fine-grained optimization system using task-type classifiers to dynamically select among five
+                    context retrieval complexities (baseline RAG to agentic search), achieving up to 10% accuracy
+                    improvement and 2x speedup over static methods on Video-MME.
                   </div>
                 </div>
-                <img src="images/VLM_context_engineering_results.png" alt="VLM Context Engineering Results" class="project-image">
+                <img src="images/VLM_context_engineering_results.png" alt="VLM Context Engineering Results"
+                  class="project-image">
               </div>
             </li>
             <li>
@@ -811,7 +876,10 @@
                   <div class="project-course">GaTech VIP 6603 (Dr. Yichang (James) Tsai)</div>
                   <div class="project-date">Aug 2025 – Present</div>
                   <div class="project-description">
-                    Adapting Swin ViT models to self-supervised 2-channel pavement image registration by adding a 1x1 input adapter layer and small regression head, enabling transfer learning from ImageNet; enables agencies to monitor degradations of roads over time. Improved the SOTA metric by 4% (% of images with IoP > 0.6).
+                    Adapting Swin ViT models to self-supervised 2-channel pavement image registration by adding a 1x1
+                    input adapter layer and small regression head, enabling transfer learning from ImageNet; enables
+                    agencies to monitor degradations of roads over time. Improved the SOTA metric by 4% (% of images
+                    with IoP > 0.6).
                   </div>
                 </div>
               </div>
@@ -823,7 +891,9 @@
                   <div class="project-course">CS 8903 Agentic AI (Dr. Vijay Madisetti)</div>
                   <div class="project-date">May 2025 – Jul 2025</div>
                   <div class="project-description">
-                    Developed PROPEL, a training-free, explainable framework leveraging empirical bias profiling and inverse propensity weighting to mitigate position bias in LLM re-ranking, improving accuracy by up to 26.7% in NDCG@1 across real-world datasets.
+                    Developed PROPEL, a training-free, explainable framework leveraging empirical bias profiling and
+                    inverse propensity weighting to mitigate position bias in LLM re-ranking, improving accuracy by up
+                    to 26.7% in NDCG@1 across real-world datasets.
                   </div>
                 </div>
                 <img src="images/propel_arch.png" alt="PROPEL Architecture" class="project-image">
@@ -832,7 +902,7 @@
           </ul>
         </div>
 
-        <div class="info-block" id="open-source">
+        <!-- <div class="info-block" id="open-source">
           <h2>Open Source</h2>
           <p>Highlighting some of my key GitHub repositories:</p>
           <div class="github-stats-container">
@@ -843,9 +913,9 @@
               <img src="https://github-readme-stats.vercel.app/api/pin/?username=Tushar-Tyagi&repo=ML_from_scratch&theme=graywhite&hide_border=true&title_color=667eea" alt="ML_from_scratch Repo" />
             </a>
           </div>
-        </div>
+        </div> -->
 
-        <div class="info-block" id="blogs">
+        <!-- <div class="info-block" id="blogs">
           <h2>Technical Blogs</h2>
           <ul class="projects-list">
             <li>
@@ -859,20 +929,25 @@
               </div>
             </li>
           </ul>
-        </div>
-        
+        </div> -->
+
         <div class="info-block" id="publications">
           <h2>Patent</h2>
           <ul class="publications-list">
             <li>
-              <b><a href="https://patents.google.com/patent/US20240404070A1/en" target="_blank" class="patent-link">US20240404070A1</a>:</b> Precise book page boundary detection using deep ML model and image processing algorithms. <i>Published Sept 2024.</i><br>
+              <b><a href="https://patents.google.com/patent/US20240404070A1/en" target="_blank"
+                  class="patent-link">US20240404070A1</a>:</b> Precise book page boundary detection using deep ML model
+              and image processing algorithms. <i>Published Sept 2024.</i><br>
               <div style="margin-top: 8px; font-size: 0.95em; color: #555;">
-                Developed a machine learning-based system using convolutional neural networks to automatically detect and extract book page boundaries from photographs. This patent powers the "Book Mode" feature in Adobe Scan app, which enables users to extract left and right pages from book spreads with a single click. The feature is currently used by 5M+ monthly users for digitizing physical documents.
+                Developed a machine learning-based system using convolutional neural networks to automatically detect
+                and extract book page boundaries from photographs. This patent powers the "Book Mode" feature in Adobe
+                Scan app, which enables users to extract left and right pages from book spreads with a single click. The
+                feature is currently used by 5M+ monthly users for digitizing physical documents.
               </div>
             </li>
           </ul>
         </div>
-        
+
         <div class="info-block" id="education">
           <h2>Education</h2>
           <ul class="education-list">
@@ -882,7 +957,8 @@
               GPA: 4.0/4.0
             </li>
             <li>
-              <b>Indian Institute of Technology Mandi</b> — B.Tech in Computer Science, Minor in Management Studies<br />
+              <b>Indian Institute of Technology Mandi</b> — B.Tech in Computer Science, Minor in Management
+              Studies<br />
               Aug 2017 – June 2021<br />
               CGPA: 8.39/10.00
             </li>
@@ -914,20 +990,21 @@
             </li>
           </ul>
         </div>
-        
-        
+
+
         <div class="info-block" id="media-presentations">
           <h2>Media & Presentations</h2>
           <ul class="experience-list">
             <li>
               <b>Adobe Document Cloud Summit Presentation</b><br />
               <i>December 2022</i><br />
-              Delivered a technical talk on "Book Mode" in front of Adobe leadership and staff engineers. Selected as one of 8 out of 200 applications, showcasing the impact and innovation of my document intelligence models.
+              Delivered a technical talk on "Book Mode" in front of Adobe leadership and staff engineers. Selected as
+              one of 8 out of 200 applications, showcasing the impact and innovation of my document intelligence models.
             </li>
           </ul>
         </div>
 
-<div class="info-block" id="achievements">
+        <div class="info-block" id="achievements">
           <h2>Achievements</h2>
           <ul class="achievements-list">
             <li>Winner: Acrobat Desktop Ideathon (June 2023)</li>
@@ -942,7 +1019,8 @@
     <div class="visitor-map">
       <h2>Visitor Map</h2>
       <div class="map-container">
-        <script type="text/javascript" id="mapmyvisitors" src="//mapmyvisitors.com/map.js?d=0sJ4JQU_LnOaveT46lemZyx6AnkFye8spTBhS4OANK0&cl=ffffff&w=a"></script>
+        <script type="text/javascript" id="mapmyvisitors"
+          src="//mapmyvisitors.com/map.js?d=0sJ4JQU_LnOaveT46lemZyx6AnkFye8spTBhS4OANK0&cl=ffffff&w=a"></script>
       </div>
     </div>
     <!-- Footer -->
@@ -951,4 +1029,5 @@
     </footer>
   </div>
 </body>
+
 </html>

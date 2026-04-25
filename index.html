@@ -26,19 +26,17 @@
         <line x1="18.36" y1="5.64" x2="19.78" y2="4.22"></line>
       </svg>
     </button>
+    <div class="nav">
+      <a href="#bio">Bio</a>
+      <a href="#projects">Projects</a>
+      <a href="#publications">Patent</a>
+      <a href="#education">Education</a>
+      <a href="#experience">Experience</a>
+      <a href="#media-presentations">Talks</a>
+      <a href="tushar_tyagi_Jan26_res.pdf" target="_blank">Résumé</a>
+    </div>
     <div class="header">
       <h1>Tushar Tyagi</h1>
-      <div class="nav">
-        <a href="#bio">Bio</a>
-        <a href="#projects">Projects</a>
-        <!-- <a href="#open-source">Open Source</a> -->
-        <!-- <a href="#blogs">Blogs</a> -->
-        <a href="#publications">Patent</a>
-        <a href="#education">Education</a>
-        <a href="#experience">Experience</a>
-        <a href="#media-presentations">Talks</a>
-        <a href="tushar_tyagi_Jan26_res.pdf" target="_blank">Résumé</a>
-      </div>
     </div>
 
     <div class="main-content">
@@ -296,6 +294,36 @@
     const themeToggle = document.getElementById('themeToggle');
     const moonIcon = document.getElementById('moon-icon');
     const sunIcon = document.getElementById('sun-icon');
+
+    // Active Navigation Highlighting
+    const navLinks = document.querySelectorAll('.nav a[href^="#"]');
+    const sections = Array.from(navLinks).map(link => document.querySelector(link.getAttribute('href')));
+
+    const handleScroll = () => {
+      let currentSection = '';
+      const scrollY = window.pageYOffset;
+
+      sections.forEach(section => {
+        if (section) {
+          const sectionTop = section.offsetTop - 100;
+          const sectionHeight = section.offsetHeight;
+          if (scrollY >= sectionTop && scrollY < sectionTop + sectionHeight) {
+            currentSection = '#' + section.getAttribute('id');
+          }
+        }
+      });
+
+      navLinks.forEach(link => {
+        link.classList.remove('active');
+        if (link.getAttribute('href') === currentSection) {
+          link.classList.add('active');
+        }
+      });
+    };
+
+    window.addEventListener('scroll', handleScroll);
+    // Call once initially
+    handleScroll();
 
     // Check for saved theme preference or use system preference
     const getPreferredTheme = () => {

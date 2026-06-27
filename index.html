@@ -531,6 +531,33 @@
       color: var(--dim);
     }
 
+    .positions-list {
+      display: flex;
+      flex-direction: column;
+      gap: 20px;
+      max-width: 800px;
+      margin: 0 auto;
+    }
+
+    .position-item {
+      background: var(--card);
+      border-radius: 12px;
+      padding: 20px;
+      border-left: 4px solid var(--accent);
+    }
+
+    .position-title {
+      font-size: 18px;
+      font-weight: 600;
+      color: var(--text);
+      margin-bottom: 4px;
+    }
+
+    .position-meta {
+      font-size: 14px;
+      color: var(--dim);
+    }
+
     /* ---------- EXPERIENCE (image cards) ---------- */
     .exp-grid {
       display: flex;
@@ -1001,8 +1028,7 @@
     <div class="wrap">
       <div class="patents-list">
         <div class="patent-item">
-          <div class="patent-title">Precise book page boundary detection using deep ML model and image processing
-            algorithms.</div>
+          <div class="patent-title">System and method for document intelligence using multimodal learning</div>
           <div class="patent-meta">US Patent US20240404070A1 · 2024</div>
           <a href="https://patents.google.com/patent/US20240404070A1/en" target="_blank"
             class="btn btn-secondary btn-small">View Patent ↗</a>
@@ -1040,6 +1066,35 @@
         <div class="award-item">
           <div class="award-title">IIT Mandi Freshmen Innovation Challenge</div>
           <div class="award-meta">2018 · 3rd position</div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- ===== POSITIONS OF RESPONSIBILITY ===== -->
+  <section class="section" id="positions">
+    <div class="section-banner">
+      <div class="wrap">
+        <span class="label">Positions of Responsibility</span>
+      </div>
+    </div>
+    <div class="wrap">
+      <div class="positions-list">
+        <div class="position-item">
+          <div class="position-title">Cultural Affairs Secretary, Student Gymkhana, IIT Mandi</div>
+          <div class="position-meta">2020-2021 · Responsible for the smooth functioning of cultural council in the college, involves managing various events, budgets and coming up with new ideas.</div>
+        </div>
+        <div class="position-item">
+          <div class="position-title">Coordinator, Film-making club, IIT Mandi</div>
+          <div class="position-meta">2018-2019 · Arranged workshops, mentored juniors for cinematography, managed club budget and trips.</div>
+        </div>
+        <div class="position-item">
+          <div class="position-title">Astrophotography Head, Space Technology and Astronomy Cell, IIT Mandi</div>
+          <div class="position-meta">2018-2019 · Taught basics of astrophotography, planned and managed club trips.</div>
+        </div>
+        <div class="position-item">
+          <div class="position-title">Multimedia Head, Exodia (Techno-Cultural Fest), IIT Mandi</div>
+          <div class="position-meta">2019 · Managed photo and video coverage of whole event and communicated with after-movie team.</div>
         </div>
       </div>
     </div>

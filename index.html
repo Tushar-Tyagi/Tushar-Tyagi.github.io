@@ -7,8 +7,7 @@
   <title>Tushar Tyagi</title>
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-  <link
-    href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&family=Joan&display=swap"
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;900&family=Joan&display=swap"
     rel="stylesheet">
   <style>
     * {
@@ -553,11 +552,15 @@
 
     .exp-img {
       width: 100%;
-      height: 227px;
+      height: auto;
+      max-height: 160px;
       border-radius: 20px;
       background: var(--card-img);
-      object-fit: cover;
-      display: block;
+      object-fit: contain;
+      padding: 15px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
     }
 
     .exp-img.note {
@@ -725,11 +728,13 @@
         flex-wrap: wrap;
       }
 
-      .patent-item, .award-item {
+      .patent-item,
+      .award-item {
         padding: 16px;
       }
 
-      .patent-title, .award-title {
+      .patent-title,
+      .award-title {
         font-size: 18px;
       }
 
@@ -748,16 +753,32 @@
 
     <div class="nav-social">
       <a href="tushar_tyagi_Jan26_res.pdf" target="_blank" aria-label="Résumé" title="Résumé">
-        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z"/><path d="M14 2v6h6"/><path d="M16 13H8"/><path d="M16 17H8"/><path d="M10 9H8"/></svg>
+        <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round"
+          stroke-linejoin="round">
+          <path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8l-6-6z" />
+          <path d="M14 2v6h6" />
+          <path d="M16 13H8" />
+          <path d="M16 17H8" />
+          <path d="M10 9H8" />
+        </svg>
       </a>
       <a href="https://linkedin.com/in/tushartyagi01" target="_blank" aria-label="LinkedIn" title="LinkedIn">
-        <svg viewBox="0 0 24 24"><path d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.99H5.67v8.35h2.67zM7 8.8a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.54v-4.57c0-2.45-1.31-3.59-3.06-3.59-1.41 0-2.04.78-2.39 1.32v-1.13h-2.67c.04.75 0 8.35 0 8.35h2.67v-4.66c0-.24.02-.48.09-.65.19-.48.63-.97 1.36-.97.96 0 1.34.73 1.34 1.8v4.48h2.67z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M19 3a2 2 0 0 1 2 2v14a2 2 0 0 1-2 2H5a2 2 0 0 1-2-2V5a2 2 0 0 1 2-2h14zM8.34 18.34V9.99H5.67v8.35h2.67zM7 8.8a1.55 1.55 0 1 0 0-3.1 1.55 1.55 0 0 0 0 3.1zm11.34 9.54v-4.57c0-2.45-1.31-3.59-3.06-3.59-1.41 0-2.04.78-2.39 1.32v-1.13h-2.67c.04.75 0 8.35 0 8.35h2.67v-4.66c0-.24.02-.48.09-.65.19-.48.63-.97 1.36-.97.96 0 1.34.73 1.34 1.8v4.48h2.67z" />
+        </svg>
       </a>
       <a href="https://instagram.com/tushar.photog" target="_blank" aria-label="Instagram" title="Instagram">
-        <svg viewBox="0 0 24 24"><path d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.19.41-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.17.42-.36 1.04-.41 2.19-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.41 2.19.21.55.47.94.88 1.35.41.41.8.67 1.35.88.42.17 1.04.36 2.19.41 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.19-.41.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.17-.42.36-1.04.41-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.41-2.19a3.64 3.64 0 0 0-.88-1.35 3.64 3.64 0 0 0-1.35-.88c-.42-.17-1.04-.36-2.19-.41-1.24-.06-1.61-.07-4.76-.07zm0 2.76a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm0 1.62a3.68 3.68 0 1 0 0 7.36 3.68 3.68 0 0 0 0-7.36zm5.5-2.86a1.24 1.24 0 1 1 0 2.48 1.24 1.24 0 0 1 0-2.48z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M12 2.16c3.2 0 3.58.01 4.85.07 1.17.05 1.8.25 2.23.41.56.22.96.48 1.38.9.42.42.68.82.9 1.38.16.42.36 1.06.41 2.23.06 1.27.07 1.65.07 4.85s-.01 3.58-.07 4.85c-.05 1.17-.25 1.8-.41 2.23-.22.56-.48.96-.9 1.38-.42.42-.82.68-1.38.9-.42.16-1.06.36-2.23.41-1.27.06-1.65.07-4.85.07s-3.58-.01-4.85-.07c-1.17-.05-1.8-.25-2.23-.41a3.72 3.72 0 0 1-1.38-.9 3.72 3.72 0 0 1-.9-1.38c-.16-.42-.36-1.06-.41-2.23C2.17 15.58 2.16 15.2 2.16 12s.01-3.58.07-4.85c.05-1.17.25-1.8.41-2.23.22-.56.48-.96.9-1.38.42-.42.82-.68 1.38-.9.42-.16 1.06-.36 2.23-.41C8.42 2.17 8.8 2.16 12 2.16zm0 1.62c-3.15 0-3.52.01-4.76.07-1.15.05-1.77.24-2.19.41-.55.21-.94.47-1.35.88-.41.41-.67.8-.88 1.35-.17.42-.36 1.04-.41 2.19-.06 1.24-.07 1.61-.07 4.76s.01 3.52.07 4.76c.05 1.15.24 1.77.41 2.19.21.55.47.94.88 1.35.41.41.8.67 1.35.88.42.17 1.04.36 2.19.41 1.24.06 1.61.07 4.76.07s3.52-.01 4.76-.07c1.15-.05 1.77-.24 2.19-.41.55-.21.94-.47 1.35-.88.41-.41.67-.8.88-1.35.17-.42.36-1.04.41-2.19.06-1.24.07-1.61.07-4.76s-.01-3.52-.07-4.76c-.05-1.15-.24-1.77-.41-2.19a3.64 3.64 0 0 0-.88-1.35 3.64 3.64 0 0 0-1.35-.88c-.42-.17-1.04-.36-2.19-.41-1.24-.06-1.61-.07-4.76-.07zm0 2.76a5.3 5.3 0 1 1 0 10.6 5.3 5.3 0 0 1 0-10.6zm0 1.62a3.68 3.68 0 1 0 0 7.36 3.68 3.68 0 0 0 0-7.36zm5.5-2.86a1.24 1.24 0 1 1 0 2.48 1.24 1.24 0 0 1 0-2.48z" />
+        </svg>
       </a>
       <a href="mailto:tushartyagi1811@gmail.com" aria-label="Email" title="Email">
-        <svg viewBox="0 0 24 24"><path d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z"/></svg>
+        <svg viewBox="0 0 24 24">
+          <path
+            d="M20 4H4a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2zm0 4l-8 5-8-5V6l8 5 8-5v2z" />
+        </svg>
       </a>
     </div>
 
@@ -766,7 +787,10 @@
       <a href="#projects">projects</a>
       <a href="#experience">experience</a>
       <button class="theme-toggle" id="themeToggle" aria-label="Toggle theme" title="Toggle light / dark">
-        <svg id="themeIcon" viewBox="0 0 24 24"><path d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.62 2.61 5.4 5.4 0 0 1-5.4-5.4c0-1.81.89-3.42 2.26-4.4-.38-.06-.76-.1-1.14-.1z"/></svg>
+        <svg id="themeIcon" viewBox="0 0 24 24">
+          <path
+            d="M12 3a9 9 0 1 0 9 9c0-.46-.04-.92-.1-1.36a5.39 5.39 0 0 1-4.62 2.61 5.4 5.4 0 0 1-5.4-5.4c0-1.81.89-3.42 2.26-4.4-.38-.06-.76-.1-1.14-.1z" />
+        </svg>
       </button>
     </div>
   </nav>
@@ -779,7 +803,10 @@
         <div class="hero-name-row">
           <h1 class="hero-name">I&rsquo;m Tushar</h1>
           <span class="cam-icon">
-            <svg viewBox="0 0 24 24"><path d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zM9 3l-1.83 2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.17L15 3H9zm3 14a5 5 0 1 1 0-10 5 5 0 0 1 0 10z"/></svg>
+            <svg viewBox="0 0 24 24">
+              <path
+                d="M12 15.2a3.2 3.2 0 1 0 0-6.4 3.2 3.2 0 0 0 0 6.4zM9 3l-1.83 2H4a2 2 0 0 0-2 2v11a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V7a2 2 0 0 0-2-2h-3.17L15 3H9zm3 14a5 5 0 1 1 0-10 5 5 0 0 1 0 10z" />
+            </svg>
           </span>
         </div>
         <p class="hero-tagline">Turning ideas into products and moments into photographs.</p>
@@ -805,90 +832,91 @@
     <div class="wrap">
       <div class="timeline">
 
-      <div class="tl-row">
-        <div class="tl-date">Jan 2026 – Present</div>
-        <div class="tl-content">
-          <div>
-            <div class="tl-meta">Llamas Lab · Ongoing</div>
-            <div class="tl-title">Historical Manuscript OCR</div>
-          </div>
-          <p class="tl-desc">Historical Manuscript OCR [Open-Source AI Contribution]: Evaluated 8 Vision-Language Models (Qwen 2B–32B) for handwritten text recognition; achieved 0.124 CER with Qwen2.5-VL-7B. Applied LoRA fine-tuning for 52% CER improvement on weaker models.</p>
-          <div class="pills">
-            <span class="pill">PyTorch</span>
-            <span class="pill">LoRA</span>
-            <span class="pill">Transformers</span>
-            <span class="pill">Quantization</span>
-          </div>
-          <div class="tl-links">
-            <a href="https://github.com/Tushar-Tyagi/RenAIssance/tree/main/RenAIssance_VLM_OCR_Tushar_Tyagi" target="_blank" class="btn btn-secondary btn-small">GitHub</a>
-            <a href="#" class="btn btn-secondary btn-small">Demo</a>
-          </div>
-        </div>
-      </div>
-
-      <div class="tl-row">
-        <div class="tl-date">August – December 2025</div>
-        <div class="tl-content">
-          <div>
-            <div class="tl-meta">CS 8803 LRV · +10% accuracy · 2× speedup</div>
-            <div class="tl-title">VLM Context Engineering</div>
-          </div>
-          <img class="tl-img" src="images/VLM_context_engineering_results.png" alt="VLM Context Engineering results">
-          <p class="tl-desc">Fine-grained optimisation system using task-type classifiers to dynamically select among five context retrieval strategies — from baseline RAG to agentic search — on the Video-MME benchmark.</p>
-          <div class="pills">
-            <span class="pill">Video-MME</span>
-            <span class="pill">RAG</span>
-            <span class="pill">VLM</span>
-          </div>
-          <div class="tl-links">
-            <a href="https://github.com/Tushar-Tyagi/vlm-context-engineering" target="_blank" class="btn btn-secondary btn-small">GitHub</a>
-            <a href="#" class="btn btn-secondary btn-small">Paper</a>
+        <div class="tl-row">
+          <div class="tl-date">Jan 2026 – Present</div>
+          <div class="tl-content">
+            <div>
+              <div class="tl-meta">Llamas Lab · Ongoing</div>
+              <div class="tl-title">Historical Manuscript OCR</div>
+            </div>
+            <p class="tl-desc">Historical Manuscript OCR [Open-Source AI Contribution]: Evaluated 8 Vision-Language
+              Models (Qwen 2B–32B) for handwritten text recognition; achieved 0.124 CER with Qwen2.5-VL-7B. Applied LoRA
+              fine-tuning for 52% CER improvement on weaker models.</p>
+            <div class="pills">
+              <span class="pill">PyTorch</span>
+              <span class="pill">LoRA</span>
+              <span class="pill">Transformers</span>
+              <span class="pill">Quantization</span>
+            </div>
+            <div class="tl-links">
+              <a href="https://github.com/Tushar-Tyagi/RenAIssance/tree/main/RenAIssance_VLM_OCR_Tushar_Tyagi"
+                target="_blank" class="btn btn-secondary btn-small">GitHub</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="tl-row">
-        <div class="tl-date">August 2025 – Present</div>
-        <div class="tl-content">
-          <div>
-            <div class="tl-meta">VIP 6603 · Ongoing · +4% SOTA on IoP metric</div>
-            <div class="tl-title">DeepPIR</div>
-          </div>
-          <p class="tl-desc">Adapts Swin ViT models to self-supervised 2-channel pavement image registration with a 1×1 input adapter layer, enabling road-degradation monitoring for infrastructure agencies.</p>
-          <div class="pills">
-            <span class="pill">Swin ViT</span>
-            <span class="pill">Self-supervised</span>
-            <span class="pill">Transfer Learning</span>
-          </div>
-          <div class="tl-links">
-            <a href="#" class="btn btn-secondary btn-small">GitHub</a>
-            <a href="#" class="btn btn-secondary btn-small">Demo</a>
+        <div class="tl-row">
+          <div class="tl-date">August – December 2025</div>
+          <div class="tl-content">
+            <div>
+              <div class="tl-meta">CS 8803 LRV · +10% accuracy · 2× speedup</div>
+              <div class="tl-title">VLM Context Engineering</div>
+            </div>
+            <img class="tl-img" src="images/VLM_context_engineering_results.png" alt="VLM Context Engineering results">
+            <p class="tl-desc">Fine-grained optimisation system using task-type classifiers to dynamically select among
+              five context retrieval strategies — from baseline RAG to agentic search — on the Video-MME benchmark.</p>
+            <div class="pills">
+              <span class="pill">Video-MME</span>
+              <span class="pill">RAG</span>
+              <span class="pill">VLM</span>
+            </div>
+            <div class="tl-links">
+              <a href="https://github.com/Tushar-Tyagi/vlm-context-engineering" target="_blank"
+                class="btn btn-secondary btn-small">GitHub</a>
+            </div>
           </div>
         </div>
-      </div>
 
-      <div class="tl-row">
-        <div class="tl-date">May – July 2025</div>
-        <div class="tl-content">
-          <div>
-            <div class="tl-meta">CS 8903 Agentic AI · +26.7% NDCG@1</div>
-            <div class="tl-title">PROPEL</div>
-          </div>
-          <img class="tl-img" src="images/propel_arch.png" alt="PROPEL architecture">
-          <p class="tl-desc">Training-free, explainable framework using empirical bias profiling and inverse propensity weighting to mitigate position bias in LLM re-ranking across real-world datasets.</p>
-          <div class="pills">
-            <span class="pill">LLM Re-ranking</span>
-            <span class="pill">Bias Mitigation</span>
-            <span class="pill">Explainable AI</span>
-          </div>
-          <div class="tl-links">
-            <a href="https://github.com/Tushar-Tyagi/PROPEL" target="_blank" class="btn btn-secondary btn-small">GitHub</a>
-            <a href="#" class="btn btn-secondary btn-small">Paper</a>
+        <div class="tl-row">
+          <div class="tl-date">August 2025 – Present</div>
+          <div class="tl-content">
+            <div>
+              <div class="tl-meta">VIP 6603 · Ongoing · +4% SOTA on IoP metric</div>
+              <div class="tl-title">DeepPIR</div>
+            </div>
+            <p class="tl-desc">Adapts Swin ViT models to self-supervised 2-channel pavement image registration with a
+              1×1 input adapter layer, enabling road-degradation monitoring for infrastructure agencies.</p>
+            <div class="pills">
+              <span class="pill">Swin ViT</span>
+              <span class="pill">Self-supervised</span>
+              <span class="pill">Transfer Learning</span>
+            </div>
           </div>
         </div>
-      </div>
 
-    </div>
+        <div class="tl-row">
+          <div class="tl-date">May – July 2025</div>
+          <div class="tl-content">
+            <div>
+              <div class="tl-meta">CS 8903 Agentic AI · +26.7% NDCG@1</div>
+              <div class="tl-title">PROPEL</div>
+            </div>
+            <img class="tl-img" src="images/propel_arch.png" alt="PROPEL architecture">
+            <p class="tl-desc">Training-free, explainable framework using empirical bias profiling and inverse
+              propensity weighting to mitigate position bias in LLM re-ranking across real-world datasets.</p>
+            <div class="pills">
+              <span class="pill">LLM Re-ranking</span>
+              <span class="pill">Bias Mitigation</span>
+              <span class="pill">Explainable AI</span>
+            </div>
+            <div class="tl-links">
+              <a href="https://github.com/Tushar-Tyagi/PROPEL" target="_blank"
+                class="btn btn-secondary btn-small">GitHub</a>
+            </div>
+          </div>
+        </div>
+
+      </div>
     </div>
   </section>
 
@@ -944,9 +972,9 @@
           <div class="tl-content">
             <div>
               <div class="tl-title">Georgia Institute of Technology</div>
-              <div class="tl-meta">Master of Science in Computer Science</div>
+              <div class="tl-meta">Master of Science in Computer Science. 4.0/4.0</div>
             </div>
-            <p class="tl-desc">Specialization in Machine Learning and Computer Vision. Relevant coursework: Deep Learning, Computer Vision, Natural Language Processing.</p>
+            <p class="tl-desc">Specialization in Machine Learning. Master's Project on Agentic Video Analytics</p>
           </div>
         </div>
         <div class="tl-row">
@@ -954,9 +982,10 @@
           <div class="tl-content">
             <div>
               <div class="tl-title">Indian Institute of Technology, Delhi</div>
-              <div class="tl-meta">Bachelor of Technology in Computer Science</div>
+              <div class="tl-meta">Bachelor of Technology in Computer Science. Minor in Management Studies</div>
             </div>
-            <p class="tl-desc">Graduated with honors. Thesis on document analysis using deep learning.</p>
+            <p class="tl-desc">Bechelor's Project on Alzeimer Detection from fMRI data using novel data representations
+              in Deep Learning</p>
           </div>
         </div>
       </div>
@@ -973,9 +1002,11 @@
     <div class="wrap">
       <div class="patents-list">
         <div class="patent-item">
-          <div class="patent-title">System and method for document intelligence using multimodal learning</div>
+          <div class="patent-title">Precise book page boundary detection using deep ML model and image processing
+            algorithms.</div>
           <div class="patent-meta">US Patent US20240404070A1 · 2024</div>
-          <a href="https://patents.google.com/patent/US20240404070A1/en" target="_blank" class="btn btn-secondary btn-small">View Patent ↗</a>
+          <a href="https://patents.google.com/patent/US20240404070A1/en" target="_blank"
+            class="btn btn-secondary btn-small">View Patent ↗</a>
         </div>
       </div>
     </div>
@@ -991,16 +1022,25 @@
     <div class="wrap">
       <div class="awards-list">
         <div class="award-item">
-          <div class="award-title">Adobe Hackathon Winner</div>
-          <div class="award-meta">2022 · Best use of Adobe Sensei</div>
+          <div class="award-title">Google Summer of Code</div>
+          <div class="award-meta">2026 · Selected for GSoC 2026 for the RenAIssance Project to create VLM based Ancient
+            Spanish text OCR.</div>
         </div>
         <div class="award-item">
-          <div class="award-title">IIT Delhi Outstanding Project Award</div>
-          <div class="award-meta">2021 · Computer Science Department</div>
+          <div class="award-title">Adobe Talk: Document Cloud Summit Presentation, Adobe, Noida.</div>
+          <div class="award-meta">2022 · Delivered a technical talk on ”Book Mode” in front of Adobe leadership and
+            staff engineers. Selected as one of 8 out of 200
+            applications, showcasing the impact and innovation of my document intelligence models</div>
         </div>
         <div class="award-item">
-          <div class="award-title">ACM ICPC Regional Finalist</div>
-          <div class="award-meta">2019 · Asia West Region</div>
+          <div class="award-title">Adobe Awards and Wins</div>
+          <div class="award-meta">Document Cloud India Hackweek(Dec 2023), Winner: Acrobat Desktop Ideathon(June 2023),
+            Star of the Month
+            Award(Sept 2022), Spot Award, (Nov 2021,Oct 2024), Good Works Award(Aug 2022)</div>
+        </div>
+        <div class="award-item">
+          <div class="award-title">IIT Mandi Freshmen Innovation Challenge</div>
+          <div class="award-meta">2018 · 3rd position</div>
         </div>
       </div>
     </div>
@@ -1015,7 +1055,12 @@
     </div>
     <div class="wrap">
       <div class="about">
-        <p class="about-text">I'm Tushar, a graduate student at Georgia Tech working on Machine Learning and Computer Vision. Previously, I spent four years at Adobe building document intelligence and computer vision systems that now serve millions of users. I'm fascinated by the challenge of turning cutting-edge research into products that are fast, efficient, and actually useful in the real world. When I'm away from my keyboard, I'm usually traveling, chasing good light with my camera, or exploring somewhere new. Photography taught me how to frame a moment; engineering taught me how to build one.</p>
+        <p class="about-text">I'm Tushar, a graduate student at Georgia Tech working on Machine Learning and Computer
+          Vision. Previously, I spent four years at Adobe building document intelligence and computer vision systems
+          that now serve millions of users. I'm fascinated by the challenge of turning cutting-edge research into
+          products that are fast, efficient, and actually useful in the real world. When I'm away from my keyboard, I'm
+          usually traveling, chasing good light with my camera, or exploring somewhere new. Photography taught me how to
+          frame a moment; engineering taught me how to build one.</p>
         <img class="about-photo" src="_DSC9175-Enhanced-NR.jpg" alt="Tushar — photography" />
       </div>
     </div>
